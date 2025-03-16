@@ -1,7 +1,5 @@
 # How JavaScript code is being executed?
 
-# JavaScript Execution
-
 1. **Parsing**: Converts code into an Abstract Syntax Tree (AST).
 2. **Memory Allocation**: Variables and function declarations are hoisted and allocated in memory.
 3. **Execution Context**: The code starts running in the context of its execution environment (scope).
