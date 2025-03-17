@@ -24,32 +24,55 @@
    Change the second element of the array to `"jasmine tea"`.
 */
 
-const teaTypes = ["herbal tea", "white tea", "masala chai", "jasmine tea"];
+// const teaTypes = ["herbal tea", "white tea", "masala chai", "jasmine tea"];
 
-teaTypes[1] = "jasmine tea";
+// teaTypes[1] = "jasmine tea";
 
-console.log(teaTypes);
+// console.log(teaTypes);
 
 /* 
 4. Declare an array named `citiesVisited` containing `"Mumbai"` and `"Sydney"`. 
    Add `"Berlin"` to the array using the `push` method.
 */
 
+// const citiesVisited = ["Mumbai", "Sydney"];
+
+// citiesVisited.push("Berlin");
+// console.log(citiesVisited);
+
 /* 
 5. You have an array named `teaOrders` with `"chai"`, `"iced tea"`, `"matcha"`, and `"earl grey"`. 
    Remove the last element of the array using the `pop` method and store it in a variable named `lastOrder`.
 */
+
+// const teaOrders = ["chai", "iced tea", "matcha", "earl grey"];
+
+// teaOrders.pop();
+
+// console.log(teaOrders);
 
 /* 
 6. You have an array named `popularTeas` containing `"green tea"`, `"oolong tea"`, and `"chai"`. 
    Create a soft copy of this array named `softCopyTeas`.
 */
 
+// const popularTeas = ["green tea", "oolong tea", "chai"];
+
+// const softCopyTeas = Array.from(popularTeas);
+
+// softCopyTeas.pop();
+
+// console.log(popularTeas);
+// console.log(softCopyTeas);
+
 /* 
 7. You have an array named `topCities` containing `"Berlin"`, `"Singapore"`, and `"New York"`. 
    Create a hard copy of this array named `hardCopyCities`.
 */
 
+// const topCities = ["Berlin", "Singapore", "New York"];
+
+// const hardCopyCities = topCities.slice();
 // console.log(hardCopyCities);
 
 /* 
@@ -57,12 +80,28 @@ console.log(teaTypes);
    Merge these two arrays into a new array named `worldCities`.
 */
 
+// const europeanCities = ["Paris", "Rome"];
+// const asianCities = ["Tokyo", "Bangkok"];
+
+// const worldCities = asianCities.concat(europeanCities);
+
+// console.log(worldCities);
+
 /* 
 9. You have an array named `teaMenu` containing `"masala chai"`, `"oolong tea"`, `"green tea"`, and `"earl grey"`. 
    Find the length of the array and store it in a variable named `menuLength`.
 */
 
+// const teaMenu = ["masala chai", "oolong tea", "green tea", "early grey"];
+// const menuLength = teaMenu.length;
+// console.log(menuLength);
+
 /* 
 10. You have an array named `cityBucketList` containing `"Kyoto"`, `"London"`, `"Cape Town"`, and `"Vancouver"`. 
     Check if `"London"` is in the array and store the result in a variable named `isLondonInList`.
 */
+
+const cityBucketList = ["Tokyo", "London", "Cape Town", "Vancouver"];
+
+const isLondonList = cityBucketList.includes("London");
+console.log(isLondonList);
