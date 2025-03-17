@@ -13,6 +13,12 @@
    Access the third element in the array and store it in a variable named `favoriteCity`.
 */
 
+// const cities = ["London", "Tokyo", "Paris", "New York"];
+
+// const favoriteCity = cities[2];
+
+// console.log(favoriteCity);
+
 /* 
 3. You have an array named `teaTypes` containing `"herbal tea"`, `"white tea"`, and `"masala chai"`. 
    Change the second element of the array to `"jasmine tea"`.
