@@ -24,6 +24,12 @@
    Change the second element of the array to `"jasmine tea"`.
 */
 
+const teaTypes = ["herbal tea", "white tea", "masala chai", "jasmine tea"];
+
+teaTypes[1] = "jasmine tea";
+
+console.log(teaTypes);
+
 /* 
 4. Declare an array named `citiesVisited` containing `"Mumbai"` and `"Sydney"`. 
    Add `"Berlin"` to the array using the `push` method.
