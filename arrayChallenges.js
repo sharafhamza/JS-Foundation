@@ -101,7 +101,7 @@
     Check if `"London"` is in the array and store the result in a variable named `isLondonInList`.
 */
 
-const cityBucketList = ["Tokyo", "London", "Cape Town", "Vancouver"];
+// const cityBucketList = ["Tokyo", "London", "Cape Town", "Vancouver"];
 
-const isLondonList = cityBucketList.includes("London");
-console.log(isLondonList);
+// const isLondonList = cityBucketList.includes("London");
+// console.log(isLondonList);
