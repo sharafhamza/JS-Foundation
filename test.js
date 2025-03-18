@@ -20,3 +20,9 @@
 //   double.push(multiply);
 // }
 // console.log(double);
+function convertNumber(str) {
+  const num = Number(str);
+  return isNaN(num) ? "Not A Number" : num;
+}
+
+console.log(convertNumber("5"));
