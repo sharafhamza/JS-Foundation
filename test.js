@@ -75,15 +75,26 @@
 // const mixedArr = ["hello", 2, 4, "sharaf", "al", "hamza"];
 // console.log(reverseArray(mixedArr));
 
+// const numbers = [2, 3, 4, 5, 6, 1, 44, 55];
+
+// let smallNumber = numbers[0];
+// for (let i = 1; i < numbers.length; i++) {
+//   if (numbers[i] < smallNumber) {
+//     smallNumber = numbers[i];
+//   }
+// }
+// console.log(smallNumber);
+
+// function findMax(arr) {
+//   return Math.max(...arr);
+// }
+// console.log(findMax([2, 56, 77]));
+
 const numbers = [2, 3, 4, 5, 6, 1, 44, 55];
 
-let largeNumber = 0;
-for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] > largeNumber) {
-    largeNumber = numbers[i];
-  }
-
-  return largeNumber;
+function isEven(x) {
+  return x % 2 === 0;
 }
-console.log(largeNumber);
-console.log("hello");
+let output = numbers.filter(isEven);
+
+console.log(output);
