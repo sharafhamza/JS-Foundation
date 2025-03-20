@@ -1,12 +1,19 @@
-function Car(model, color, year) {
+function Car(model, color, year, owner) {
   this.model = model;
   this.color = color;
   this.year = year;
+  this.owner = owner;
   this.wheel = () => {
     return 4;
   };
 }
 
-let Bmw = new Car("BMW", "Black", "2025");
+function CarOwner(name, age) {
+  this.name = name;
+  this.age = age;
+}
 
-console.log(Bmw);
+let carOwner = new CarOwner("sharaf", 18);
+
+const Bmw = new Car("BMW", "Black", "2025", carOwner);
+console.log(Bmw.prototype());
