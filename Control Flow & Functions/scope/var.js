@@ -1,6 +1,7 @@
 if (true) {
   // var x = 10;
 }
+//global scope means it can be accesss by anywhere even before the function declaration
 function access() {
   // access is local to function
   var x = 10;
