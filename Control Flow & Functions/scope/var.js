@@ -7,7 +7,10 @@ function access() {
   var x = 10;
   function test() {
     console.log(x);
+    content = "hi from auto global";
   }
   test();
 }
 access();
+
+console.log(content);
