@@ -1,1 +1,2 @@
-//let has only
+console.log(a);
+let a;
