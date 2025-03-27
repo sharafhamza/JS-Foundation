@@ -27,3 +27,19 @@
 // } else {
 //   console.log("no you cannot");
 // }
+
+const a = 5;
+const b = 4;
+const c = 5;
+
+if (a + b > c && a + c > b && b + c > a) {
+  if (a == b && b == c && c == a) {
+    console.log("Equilateral Triangle");
+  } else if (a === b || b === c || c === a) {
+    console.log("Isosceles Triangle ");
+  } else {
+    console.log("Scalene Triangle");
+  }
+} else {
+  console.log("no you cannot");
+}
