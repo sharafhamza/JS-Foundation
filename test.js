@@ -28,18 +28,29 @@
 //   console.log("no you cannot");
 // }
 
-const a = 5;
-const b = 4;
-const c = 5;
+// const a = 5;
+// const b = 4;
+// const c = 5;
 
-if (a + b > c && a + c > b && b + c > a) {
-  if (a == b && b == c && c == a) {
-    console.log("Equilateral Triangle");
-  } else if (a === b || b === c || c === a) {
-    console.log("Isosceles Triangle ");
-  } else {
-    console.log("Scalene Triangle");
+// if (a + b > c && a + c > b && b + c > a) {
+//   if (a == b && b == c && c == a) {
+//     console.log("Equilateral Triangle");
+//   } else if (a === b || b === c || c === a) {
+//     console.log("Isosceles Triangle ");
+//   } else {
+//     console.log("Scalene Triangle");
+//   }
+// } else {
+//   console.log("no you cannot");
+// }
+
+function isPrime(x) {
+  for (let i = 2; i <= x - 1; i++) {
+    if (x % i === 0) {
+      return console.log("It's not a prime");
+    }
   }
-} else {
-  console.log("no you cannot");
+
+  return console.log("It's a prime number");
 }
+isPrime(6);
