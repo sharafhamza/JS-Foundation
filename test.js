@@ -54,3 +54,15 @@
 //   return console.log("It's a prime number");
 // }
 // isPrime(6);
+
+function law(n) {
+  for (let row = 1; row <= n; row++) {
+    let star = "";
+    for (let col = 1; col <= n; col++) {
+      star += "*";
+    }
+    console.log(star);
+  }
+}
+
+law(2);
