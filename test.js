@@ -44,13 +44,13 @@
 //   console.log("no you cannot");
 // }
 
-function isPrime(x) {
-  for (let i = 2; i <= x - 1; i++) {
-    if (x % i === 0) {
-      return console.log("It's not a prime");
-    }
-  }
+// function isPrime(x) {
+//   for (let i = 2; i <= x - 1; i++) {
+//     if (x % i === 0) {
+//       return console.log("It's not a prime");
+//     }
+//   }
 
-  return console.log("It's a prime number");
-}
-isPrime(6);
+//   return console.log("It's a prime number");
+// }
+// isPrime(6);
