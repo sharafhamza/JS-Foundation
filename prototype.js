@@ -24,5 +24,8 @@ let tesla = {
 
 let generaticCar = {
   tyres: 4,
-  __proto__: tesla,
 };
+
+Object.setPrototypeOf(tesla, generaticCar);
+
+console.log(tesla.tyres);
