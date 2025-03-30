@@ -29,3 +29,8 @@ let generaticCar = {
 Object.setPrototypeOf(tesla, generaticCar);
 
 console.log(tesla.tyres);
+
+function Person(name, age) {
+  let name = name;
+  let age = age;
+}
