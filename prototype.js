@@ -15,6 +15,7 @@ class Person {
 let person = new Person("Sharaf", "17");
 console.log(person.greet());
 
+// Extends and super
 class Employee extends Person {
   constructor(name, age, job) {
     super(name, age);
@@ -28,3 +29,10 @@ class Employee extends Person {
 let jane = new Employee("sharaf", 21, "Developer");
 jane.greet();
 jane.work();
+
+class MathUtil {
+  static add(a, b) {
+    return a + b;
+  }
+}
+console.log(MathUtil.add(4, 5));
