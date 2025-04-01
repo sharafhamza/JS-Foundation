@@ -16,8 +16,7 @@ let person = new Person("Sharaf", "17");
 console.log(person.greet());
 
 class Employee extends Person {
-  constructor(name, age, job) {
-    super(name, age);
+  constructor(job) {
     this.job = job;
   }
   work() {
