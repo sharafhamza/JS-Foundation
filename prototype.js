@@ -30,6 +30,7 @@ let jane = new Employee("sharaf", 21, "Developer");
 jane.greet();
 jane.work();
 
+//static methods
 class MathUtil {
   static add(a, b) {
     return a + b;
