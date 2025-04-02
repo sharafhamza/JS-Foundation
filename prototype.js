@@ -41,13 +41,27 @@
 //Getter and Setter
 class Person {
   constructor(name) {
-    this._name = name; // Using underscore (_) as a convention for private variables
+    this._name = name;
   }
 
-  get shar() {
-    return this._name.toUpperCase(); // Converts name to uppercase before returning
+  get name() {
+    return this._name;
+  }
+
+  set name(newName) {
+    if (newName.length > 0) {
+      this._name = newName;
+    } else {
+      console.log("Name cannot be empty!");
+    }
   }
 }
 
-let p = new Person("sharaf");
-console.log(p.shar); // Output: SHARAF
+let p = new Person("Sharaf");
+console.log(p.name); // Output: Sharaf
+
+p.name = "John"; // Using setter to update the name
+console.log(p.name); // Output: John
+
+p.name = ""; // Invalid update
+// Output: Name cannot be empty!
