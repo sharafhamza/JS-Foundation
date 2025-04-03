@@ -13,3 +13,17 @@
 // Dog.prototype.constructor = Dog;
 
 // console.log(Dog.prototype.bark());
+
+function Person(name, age) {
+  if (age <= 0) {
+    throw new Error("Age must be a positive number");
+  }
+  this.name = name;
+  this.age = age;
+}
+
+Person.prototype.greet = function () {
+  return `Hello my name is ${this.name}`;
+};
+let newPerson = new Person("Sharaf", 17);
+console.log(Object.getPrototypeOf(newPerson));
