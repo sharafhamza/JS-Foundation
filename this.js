@@ -30,8 +30,6 @@
 // console.log(Object.getPrototypeOf(newPerson));
 
 //Problem 3
-// Task 3: Static Methods in Classes
-// Vehicle Class
 // class Vehicle {
 //   constructor(make, model) {
 //     this.make = make;
@@ -46,13 +44,11 @@
 //     return "The vehicle is moving";
 //   }
 
-//   // Static method to check if an object is an instance of Vehicle
 //   static isVehicle(obj) {
 //     return obj instanceof Vehicle;
 //   }
 // }
 
-// // Car Class (extends Vehicle)
 // class Car extends Vehicle {
 //   startEngine() {
 //     return "Engine started";
@@ -62,3 +58,6 @@
 //     return "The car is driving";
 //   }
 // }
+
+// let newCar = { name: "sharaf", age: 21 };
+// console.log(Vehicle.isVehicle(newCar));
