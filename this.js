@@ -3,4 +3,4 @@ Animal.prototype.speak = function () {
   return "Animal Speaking";
 };
 
-console.log(Animal.speak);
+console.log(Animal.prototype.speak());
