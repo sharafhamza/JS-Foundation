@@ -1,15 +1,15 @@
-function Animal() {}
-Animal.prototype.speak = function () {
-  return "Animal Speaking";
-};
+// Problem 1 solved
+// function Animal() {}
+// Animal.prototype.speak = function () {
+//   return "Animal Speaking";
+// };
 
-function Dog() {}
+// function Dog() {}
 
-Dog.prototype = Object.create(Animal.prototype);
+// Dog.prototype = Object.create(Animal.prototype);
+// Dog.prototype.bark = function () {
+//   return "Woof!";
+// };
+// Dog.prototype.constructor = Dog;
 
-Dog.prototype.constructor = Dog;
-Dog.prototype.bark = function () {
-  return "Woof!";
-};
-
-console.log(Dog.prototype.bark());
+// console.log(Dog.prototype.bark());
