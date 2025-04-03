@@ -1,1 +1,6 @@
-//This in global object represents global object
+function Animal() {}
+Animal.prototype.speak = function () {
+  return "Animal Speaking";
+};
+
+console.log(Animal.speak);
