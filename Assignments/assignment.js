@@ -8,7 +8,7 @@
 
 // simulateAsyncTask();
 
-//Problem 3
+//Problem 2
 // const delays = [1000, 2000, 3000];
 // function simulateMultipleTasks() {
 //   for (let i = 0; i < delays.length; i++) {
@@ -25,3 +25,11 @@
 // }
 
 // simulateMultipleTasks();
+
+//problem 3
+// function fetchDataWithCallback(callback) {
+//   setTimeout(() => {
+//     const data = "Fetched data";
+//     callback(data);
+//   }, 2000);
+// }
