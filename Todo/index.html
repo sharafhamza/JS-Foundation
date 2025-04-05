@@ -4,18 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <style>
-    .main {
-      display: flex;
-    }
-  </style>
+  <style></style>
   <body>
-    <div class="main">
-      <input type="text" class="input" />
-      <button class="button">Add</button>
+    <div class="todo-container">
+      <h1>📅 Today</h1>
+
+      <div class="input-group">
+        <input
+          class="add-input"
+          type="text"
+          placeholder="+ Add a new task..."
+        />
+        <button class="add">Add Task</button>
+      </div>
+
+      <ul class="main"></ul>
+
+      <script src="app.js"></script>
     </div>
-    <ul class="content"></ul>
-    <script src="./app.js"></script>
   </body>
 </html>
