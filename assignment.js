@@ -8,15 +8,20 @@
 
 // simulateAsyncTask();
 
-const delays = [1000, 2000, 3000];
-function simulateMultipleTasks() {
-  for (let i = 0; i < delays.length; i++) {
-    let taskNumber = 0 + 1;
+//Problem 3
+// const delays = [1000, 2000, 3000];
+// function simulateMultipleTasks() {
+//   for (let i = 0; i < delays.length; i++) {
+//     let taskNumber = i + 1;
 
-    setTimeout(() => {
-      console.log(`Task ${taskNumber} finished`);
-    }, delays[i]);
-  }
-}
+//     new Promise((resolve) => {
+//       setTimeout(() => {
+//         resolve();
+//       }, delays[i]);
+//     }).then(() => {
+//       console.log(`Task ${taskNumber} finished`);
+//     });
+//   }
+// }
 
-simulateMultipleTasks();
+// simulateMultipleTasks();
