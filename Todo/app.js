@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   tasks.forEach((task) => {
     renderList(task);
   });
+
   button.addEventListener("click", () => {
     const task = input.value;
     if (!task) return;
@@ -20,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     tasks.push(newTask);
     saveTask();
     input.value = "";
-    console.log(tasks);
   });
 
   function renderList(task) {
