@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector(".add");
   const input = document.querySelector(".add-input");
-  const parentEl = document.querySelector(".main");
+  const parentEl = document.querySelector(".task-list");
 
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -21,10 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
     tasks.push(newTask);
     saveTask();
     input.value = "";
+    renderList(newTask);
   });
 
   function renderList(task) {
-    console.log(task);
+    const li = document.createElement("li");
+    li.setAttribute("data-id", task.id);
+    li.innerHTML = `<span>${task.text}</span> <button class="delete-btn">Delete</button>`;
+    parentEl.appendChild(li);
   }
 
   function saveTask() {
