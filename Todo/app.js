@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   button.addEventListener("click", () => {
-    const task = input.value;
+    const task = input.value.trim();
     if (!task) return;
 
     const newTask = {
