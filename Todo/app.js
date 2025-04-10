@@ -3,12 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.querySelector(".add-input");
   const parentEl = document.querySelector(".task-list");
 
-  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-  tasks.forEach((task) => {
-    renderList(task);
-  });
-
+  function updateTodo() {
+    parentEl.innerHTML = "";
+    tasks.forEach((item) => {
+      const todoItem = renderList(item);
+      parentEl.appendChild(todoItem);
+    });
+  }
+  updateTodo();
   button.addEventListener("click", () => {
     const task = input.value.trim();
     if (!task) return;
@@ -21,14 +25,25 @@ document.addEventListener("DOMContentLoaded", () => {
     tasks.push(newTask);
     saveTask();
     input.value = "";
-    renderList(newTask);
+    updateTodo();
   });
 
   function renderList(task) {
     const li = document.createElement("li");
     li.setAttribute("data-id", task.id);
     li.innerHTML = `<span>${task.text}</span> <button class="delete-btn">Delete</button>`;
-    parentEl.appendChild(li);
+
+    const deleteButton = parentEl.document.querySelector(".delete-btn");
+    deleteButton.addEventListener("click", () => {
+      deleteTodoItem(task.id);
+    });
+
+    return li;
+  }
+  function deleteTodoItem(todoIndex) {
+    tasks = tasks.filter((_, i) => i !== todoIndex);
+    saveTask();
+    updateTodo();
   }
 
   function saveTask() {
