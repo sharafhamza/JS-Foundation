@@ -127,11 +127,15 @@ body {
   border-radius: 5px;
 }
 
-.delete-btn {
+.delete-btn,
+.edit-btn {
   background-color: #d84040;
   border: none;
   padding: 6px 10px;
   color: white;
   border-radius: 4px;
   cursor: pointer;
+}
+.edit-btn {
+  background-color: #1f7d53;
 }
