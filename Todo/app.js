@@ -19,7 +19,7 @@ function updateTodo() {
 function renderList({ text, id }) {
   const li = document.createElement("li"); // Create the <li> element
   li.setAttribute("data-id", id); // Set the data-id attribute with task id
-  li.innerHTML = `<span>${text}</span> <div><button class="edit-btn">Edit</button> <button class="delete-btn">Delete</button></div>`; // Set content of <li>
+  li.innerHTML = `<span>${text}</span> <div> <button class="delete-btn">Delete</button></div>`; // Set content of <li>
 
   // Add event listener to the delete button
   const deleteButton = li.querySelector(".delete-btn");
@@ -27,22 +27,12 @@ function renderList({ text, id }) {
     deleteTodo(id); // Call deleteTodo function when delete button is clicked
   });
 
-  const editButton = li.querySelector(".edit-btn");
-  editButton.addEventListener("click", () => {
-    editTodo(id);
-  });
   return li;
 }
 
 // Function to save tasks to localStorage
 function saveTodo() {
   localStorage.setItem("todos", JSON.stringify(tasks)); // Save tasks array as JSON string
-}
-
-function editTodo(id) {
-  const taskToEdit = tasks.find((item) => item.id === id);
-  input.value = taskToEdit.text;
-  addButton.textContent = "Save";
 }
 
 // Function to delete a task by its id
