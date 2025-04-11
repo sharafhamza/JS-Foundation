@@ -3,9 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script src="index.js"></script>
+    <div class="weather-container">
+      <h2>Weather App</h2>
+      <div class="input-group">
+        <input type="text" placeholder="Enter city" id="cityInput" />
+        <button id="getWeather">Get Weather</button>
+      </div>
+      <div class="weather-result">
+        <h3>London</h3>
+        <p>Temperature: 17.32°C</p>
+        <p>Weather: overcast clouds</p>
+      </div>
+    </div>
   </body>
 </html>
