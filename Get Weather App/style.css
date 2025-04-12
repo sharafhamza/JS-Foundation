@@ -60,3 +60,6 @@ button:hover {
 .weather-result p {
   margin: 3px 0;
 }
+.hidden {
+  display: none;
+}
