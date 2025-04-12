@@ -5,28 +5,29 @@ const API_KEY = "536c0b21ab22b719f2b7b4d3e0b83d50";
 const showName = document.querySelector(".showName");
 const showTemp = document.querySelector(".showTemp");
 const showWeather = document.querySelector(".showWeather");
-const err = document.querySelector("#error");
+const err = document.querySelector(".error-message");
+
 getWeather.addEventListener("click", async () => {
   const cityText = cityInput.value;
   if (!cityText) return;
-  const gotData = await getData(cityText);
-  if (gotData.ok === false) {
-    return showErr();
-  }
-  showData(gotData);
-});
-
-async function getData(cityName) {
   try {
-    const response =
-      await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}
-`);
-    const data = await response.json();
-
-    return data;
+    const gotData = await getData(cityText);
+    showData(gotData);
   } catch (err) {
     showErr();
   }
+});
+
+async function getData(cityName) {
+  const response =
+    await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}
+`);
+  if (!response.ok) {
+    throw new err("city not found");
+  }
+  const data = await response.json();
+
+  return data;
 }
 
 function showData(data) {
@@ -37,8 +38,7 @@ function showData(data) {
   weatherResult.classList.remove("hidden");
   err.classList.add("hidden");
 }
-
 function showErr() {
-  weatherResult.classList.add("hidden");
   err.classList.remove("hidden");
+  weatherResult.classList.add("hidden");
 }
