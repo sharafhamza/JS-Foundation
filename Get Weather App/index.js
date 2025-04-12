@@ -1,11 +1,14 @@
 const cityInput = document.getElementById("cityInput");
 const getWeather = document.getElementById("getWeather");
-const weatherContainer = document.getElementsByClassName("weather-container");
+const weatherResult = document.querySelector(".weather-result");
 const API_KEY = "536c0b21ab22b719f2b7b4d3e0b83d50";
-getWeather.addEventListener("click", () => {
+const showTemp = document.querySelector(".showTemp");
+
+getWeather.addEventListener("click", async () => {
   const cityText = cityInput.value;
   if (!cityText) return;
-  getData(cityText);
+  const gotData = await getData(cityText);
+  showData(gotData);
 });
 
 async function getData(cityName) {
@@ -18,8 +21,12 @@ async function getData(cityName) {
 
     return data;
   } catch (err) {
-    console.log("the error");
+    throw new err("City not found");
   }
 }
 
-async function showData() {}
+function showData(data) {
+  const { name, weather, main } = data;
+  showTemp.textContent = name;
+  weatherResult.classList.remove("hidden");
+}
