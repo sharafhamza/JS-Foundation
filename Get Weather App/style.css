@@ -63,3 +63,9 @@ button:hover {
 .hidden {
   display: none;
 }
+.error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}
