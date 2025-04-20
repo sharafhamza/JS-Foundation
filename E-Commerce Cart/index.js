@@ -5,6 +5,7 @@ const products = [
 ];
 const cart = [];
 const productContainer = document.querySelector("#main-container");
+const cartContainer = document.querySelector("#main-container");
 
 products.forEach((product) => {
   productItemRender(product);
@@ -22,10 +23,15 @@ productContainer.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     const productId = parseInt(e.target.getAttribute("data-id"));
     const product = products.find((p) => p.id === productId);
-    cart.push(product);
+    addCart(product);
   }
 });
 
 function addCart(product) {
   cart.push(product);
+  const productItem = document.createElement("div");
+  productItem.classList.add("product");
+  productItem.innerHTML = `<span> ${name} - $${price}</span>
+    <button class="btn" data-id="${id}">Add to Cart</button>`;
+  productContainer.appendChild(productItem);
 }
