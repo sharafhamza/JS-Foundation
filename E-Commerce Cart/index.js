@@ -13,19 +13,19 @@ products.forEach((product) => {
 function productItemRender({ name, price, id }) {
   const productItem = document.createElement("div");
   productItem.classList.add("product");
-  productItem.setAttribute("data-id", id);
   productItem.innerHTML = `<span> ${name} - $${price}</span>
-    <button class="btn">Add to Cart</button>`;
+    <button class="btn" data-id="${id}">Add to Cart</button>`;
   productContainer.appendChild(productItem);
 }
 
 productContainer.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
-    console.log("hello");
+    const productId = parseInt(e.target.getAttribute("data-id"));
+    const product = products.find((p) => p.id === productId);
+    cart.push(product);
   }
 });
 
 function addCart(product) {
   cart.push(product);
-  console.log(cart);
 }
