@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Expense Tracker</h1>
+      <div class="input-section">
+        <form id="submitForm">
+          <input
+            type="text"
+            id="course-name"
+            placeholder="Course"
+            class="input-text"
+          />
+          <input
+            type="number"
+            id="amount"
+            placeholder="Amount"
+            class="input-amount"
+          />
+          <button type="submit" class="add-btn">Add Expense</button>
+        </form>
+      </div>
+      <h2>Expenses</h2>
+      <div class="expense-list">
+        <div class="expense-item">
+          <span>Movie - $100.00</span>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+      <h3>Total: $100.00</h3>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
