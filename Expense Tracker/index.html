@@ -25,14 +25,10 @@
           <button type="submit" class="add-btn">Add Expense</button>
         </form>
       </div>
-      <h2>Expenses</h2>
-      <div class="expense-list">
-        <div class="expense-item">
-          <span>Movie - $100.00</span>
-          <button class="delete-btn">Delete</button>
-        </div>
-      </div>
-      <h3>Total: $100.00</h3>
+      <h2 class="expense-title">Expenses</h2>
+      <p class="empty-text hidden">Expenses are empty! please add something</p>
+      <ul id="expense-list" class="expense-list"></ul>
+      <h3 class="display-amount"></h3>
     </div>
 
     <script src="index.js"></script>

@@ -85,3 +85,7 @@ h3 {
 .delete-btn:hover {
   background-color: #7a00cc;
 }
+
+.hidden {
+  display: none;
+}
