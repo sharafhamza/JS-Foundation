@@ -50,7 +50,8 @@ h2 {
   background-color: #444;
 }
 
-.next-btn {
+.next-btn,
+button {
   margin-top: 15px;
   background-color: #6200ea;
   color: white;
@@ -65,4 +66,7 @@ h2 {
 
 .next-btn:hover {
   background-color: #7f39fb;
+}
+.hidden {
+  display: block;
 }
