@@ -33,7 +33,7 @@ h2 {
   font-size: 18px;
 }
 
-.options button {
+.options li {
   display: block;
   width: 100%;
   margin: 8px 0;
@@ -46,7 +46,7 @@ h2 {
   transition: background-color 0.2s;
 }
 
-.options button:hover {
+.options li:hover {
   background-color: #444;
 }
 
@@ -68,5 +68,5 @@ button {
   background-color: #7f39fb;
 }
 .hidden {
-  display: block;
+  display: none;
 }
